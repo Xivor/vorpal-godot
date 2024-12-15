@@ -84,10 +84,10 @@ class VORPALModule : public Reference {
 } // namespace godot
 } // namespace vorpal
 
-void register_vorpal_types () {
+void initialize_vorpal_module () {
   ObjectTypeDB::register_type<vorpal::godot::VORPALModule>();
 }
 
-void unregister_vorpal_types () {
+void uninitialize_vorpal_module () {
   // nothing at all?
 }
