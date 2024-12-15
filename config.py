@@ -1,6 +1,6 @@
 
-def can_build (platform):
-    return platform == 'x11'
+def can_build (env, platform):
+    return platform == 'linuxbsd'
 
 def configure (env):
     pass
