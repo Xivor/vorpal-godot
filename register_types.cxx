@@ -22,7 +22,7 @@ using std::string;
 using std::vector;
 
 class VORPALModule : public RefCounted {
-    OBJ_TYPE(VORPALModule, RefCounted);
+    GDCLASS(VORPALModule, RefCounted);
   public:
     bool start(const String &path) {
       return engine_.start(vector<string>(1, path.ascii().get_data())).ok();
@@ -84,7 +84,7 @@ class VORPALModule : public RefCounted {
 } // namespace vorpal
 
 void initialize_vorpal_module (ModuleInitializationLevel p_level) {
-  ObjectTypeDB::register_type<vorpal::godot::VORPALModule>();
+  ClassDB::register_class<vorpal::godot::VORPALModule>();
 }
 
 void uninitialize_vorpal_module (ModuleInitializationLevel p_level) {
