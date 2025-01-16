@@ -1,6 +1,9 @@
 
 Import("env")
 
+# Here you may manually append the path to the cpp files and the lib (.a) if you installed VORPAL in a custom folder
+# env.Append(CPPPATH=['/path/to/vorpal/include'])
+# env.Append(LIBPATH=['/path/to/vorpal/lib'])
 env.Append(LIBS=['vorpal', 'pdcpp', 'openal'])
 
 env_module = env.Clone()
