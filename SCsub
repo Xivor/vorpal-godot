@@ -1,7 +1,7 @@
 
 Import("env")
 
-env.Append(LIBS=['libvorpal', 'libpdcpp', 'libopenal'])
+env.Append(LIBS=['vorpal', 'pdcpp', 'openal'])
 
 env_module = env.Clone()
 env_module.Append(CXXFLAGS=['-std=c++17'])
